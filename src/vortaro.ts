@@ -41,9 +41,13 @@ export const Vorto = Record<Vorto>({
 export interface Vortaro {
 	signifoj: Map<number, RecordOf<Signifo>>,
 	vortoj: Map<number, RecordOf<Vorto>>,
+	signifoIndekso: Map<string, number>,
+	vortoIndekso: Map<string, number>,
 }
 
 export const Vortaro = Record<Vortaro>({
 	signifoj: Map(),
 	vortoj: Map(),
+	signifoIndekso: Map(),
+	vortoIndekso: Map(),
 });

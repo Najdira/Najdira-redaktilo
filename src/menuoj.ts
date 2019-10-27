@@ -1,9 +1,11 @@
 import { prompt } from "enquirer";
-import { RecordOf } from "immutable";
+import { RecordOf, List } from "immutable";
 
-import { Vortaro } from "./vortaro";
+import { Vortaro, Signifo, Vorto } from "./vortaro";
+import { Petilo } from "./agoj";
+import { aldoniVorton, kreiVorton } from "./agoj/krei";
 
-export async function ĉefaMenuo(vortaro: RecordOf<Vortaro>): Promise<void> {
+export async function ĉefaMenuo(vortaro: RecordOf<Vortaro>, petilo: Petilo): Promise<void> {
 	const {elekto} = await prompt<{elekto: string}>({
 		type: "select",
 		name: "elekto",
@@ -12,14 +14,25 @@ export async function ĉefaMenuo(vortaro: RecordOf<Vortaro>): Promise<void> {
 			"Krei vorton",
 			"Redakti vorton",
 			"Redakti signifon",
+			"Konservi kaj eliri",
 		]
 	});
 
-	switch (elekto) {
-		case "Krei vorton":
-			break;
-		default:
-			await ĉefaMenuo(vortaro);
-			break;
+	try {
+		switch (elekto) {
+			case "Krei vorton":
+				const {signifo, vorto} = await kreiVorton(vortaro, petilo, console.log);
+				ĉefaMenuo(aldoniVorton(vortaro, vorto), petilo);
+				console.log(`Vi kreis la vorton ${vorto.vorto}`);
+				break;
+			case "Konservi kaj eliri":
+				return;
+			default:
+				await ĉefaMenuo(vortaro, petilo);
+				break;
+		}
+	} catch (e) {
+		console.error(e);
+		ĉefaMenuo(vortaro, petilo);
 	}
 }

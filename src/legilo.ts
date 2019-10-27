@@ -41,6 +41,14 @@ export function legi(dosiero: string): Promise<RecordOf<Vortaro>> {
 					(acc, sekva) => acc.set(acc.size, sekva),
 					Map<number, RecordOf<Vorto>>()
 				),
+				signifoIndekso: signifoj.reduce(
+					(acc, sekva, i) => acc.set(sekva.signifo, i),
+					Map<string, number>()
+				),
+				vortoIndekso: vortoj.reduce(
+					(acc, sekva, i) => acc.set(sekva.vorto, i),
+					Map<string, number>()
+				)
 			}));
 		});
 	});
