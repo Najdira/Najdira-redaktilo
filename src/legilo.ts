@@ -1,7 +1,8 @@
 import { readFile, writeFile } from "fs";
 import { RecordOf, List, Map } from "immutable";
 
-import { Signifo, Vorto, Vortaro, VorttipoNumeroj, VorttipoSignoĉenoj } from "./vortaro";
+import { Signifo, Vorto, Vortaro, VorttipoNumeroj, VorttipoSignoĉenoj,
+	Vorttipo } from "./vortaro";
 
 export function legi(dosiero: string): Promise<RecordOf<Vortaro>> {
 	return new Promise((sukcesi, malsukcesi) => {
@@ -54,26 +55,61 @@ export function legi(dosiero: string): Promise<RecordOf<Vortaro>> {
 	});
 }
 
+export function legiJSON(dosiero: string): Promise<RecordOf<Vortaro>> {
+	return new Promise((sukcesi, malsukcesi) => {
+		readFile(dosiero, (eraro, datumo) => {
+			if (eraro != null) {
+				malsukcesi(eraro);
+				return;
+			}
+
+			const {signifoj, vortoj} = JSON.parse(datumo.toString("utf-8"));
+			const legitajSignifoj: RecordOf<Signifo>[] =
+				signifoj.map((s: {signifo: string, ecoj: number, tipo: string}) =>
+					Signifo({
+						signifo: s.signifo,
+						ecoj: s.ecoj,
+						tipo: s.tipo as Vorttipo
+					})
+				);
+
+			const legitajVortoj: RecordOf<Vorto>[] =
+				vortoj.map((v: {vorto: string, signifo: number, radikoj: number[]}) =>
+					Vorto({
+						vorto: v.vorto,
+						signifo: v.signifo,
+						radikoj: List(v.radikoj),
+					})
+				);
+
+			sukcesi(Vortaro({
+				signifoj: legitajSignifoj.reduce(
+					(acc, sekva) => acc.set(acc.size, sekva),
+					Map<number, RecordOf<Signifo>>()
+				),
+				vortoj: legitajVortoj.reduce(
+					(acc, sekva) => acc.set(acc.size, sekva),
+					Map<number, RecordOf<Vorto>>()
+				),
+				signifoIndekso: legitajSignifoj.reduce(
+					(acc, sekva, i) => acc.set(sekva.signifo, i),
+					Map<string, number>()
+				),
+				vortoIndekso: legitajVortoj.reduce(
+					(acc, sekva, i) => acc.set(sekva.vorto, i),
+					Map<string, number>()
+				)
+			}));
+		})
+	});
+}
+
 export function konservi(vortaro: RecordOf<Vortaro>, dosiero: string): Promise<void> {
 	return new Promise((sukcesi, malsukcesi) => {
-		const signifoVicoj = Array.from(Array(vortaro.signifoj.size).keys()).map(i => {
-			const signifo = vortaro.signifoj.get(i);
-			if (signifo == null) {
-				throw `Signifo ne trovita ${i}`;
-			}
-			return `${signifo.signifo}|${VorttipoSignoĉenoj.get(signifo.tipo)}|${signifo.ecoj}`;
-		});
-
-		const vortoVicoj = Array.from(Array(vortaro.vortoj.size).keys()).map(i => {
-			const vorto = vortaro.vortoj.get(i);
-			if (vorto == null) {
-				throw `Vorto ne trovita ${i}`;
-			}
-			return `${vorto.vorto} ${vorto.signifo} ${vorto.radikoj.join(" ")}`;
-		});
-
-		const enhavo = `${signifoVicoj.join("\n")}\n\n${vortoVicoj.join("\n")}`;
-		writeFile(dosiero, enhavo, eraro => {
+		writeFile(dosiero, JSON.stringify({
+			signifoj: Array.from(vortaro.signifoj.values()).map(s => s.toJSON()),
+			vortoj: Array.from(vortaro.vortoj.values()).map(v => v.toJSON()),
+		}, null, 3), eraro => {
 			if (eraro != null) {
 				malsukcesi(eraro);
 			} else {

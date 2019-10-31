@@ -5,6 +5,7 @@ import 'mocha';
 import { Vortaro, Signifo, Vorto } from '../vortaro';
 import { aldoniVorton, kreiVorton } from './krei';
 import { Petilo } from '.';
+import { kreiTestanPetilon } from "./testiloj";
 
 const testVortaro = Vortaro({
 	signifoj: List<RecordOf<Signifo>>([
@@ -27,20 +28,6 @@ const testVortaro = Vortaro({
 		luma: 0
 	}),
 });
-
-function kreiTestanPetilon(signifo: string, vorto: string, radikojn: string[]): Petilo {
-	return {
-		petiSignifon(vortaro) {
-			return Promise.resolve(signifo);
-		},
-		petiVorton() {
-			return Promise.resolve(vorto);
-		},
-		petiRadikojn(vortaro) {
-			return Promise.resolve(radikojn);
-		}
-	}
-}
 
 describe('La funkcio "aldoniVorton"', function() {
 	it('aldonas vorton kun ekzistanta signifo en vortaron', function() {

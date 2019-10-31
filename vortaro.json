@@ -1,0 +1,969 @@
+{
+   "signifoj": [
+      {
+         "signifo": "lumego",
+         "ecoj": 127,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "kanvaso",
+         "ecoj": 33,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "nova komenco",
+         "ecoj": 32,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "kio",
+         "ecoj": 127,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "koloro",
+         "ecoj": 16,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "akvo",
+         "ecoj": 17,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "trankvileco",
+         "ecoj": 0,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N aperi por D ĉe Lo",
+         "ecoj": 13,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N bati A per I",
+         "ecoj": 35,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "trankvila nokto",
+         "ecoj": 48,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "malpleneco",
+         "ecoj": 16,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "ŝtono",
+         "ecoj": 95,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "imago",
+         "ecoj": 0,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "korpo",
+         "ecoj": 120,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N travivi ĉe Lo",
+         "ecoj": 9,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N esti safirkolora",
+         "ecoj": 1,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N esti azura",
+         "ecoj": 1,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "fajro",
+         "ecoj": 56,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "ombro",
+         "ecoj": 94,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N penetri D",
+         "ecoj": 5,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "kuraĝo",
+         "ecoj": 0,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "animo",
+         "ecoj": 48,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "luno",
+         "ecoj": 47,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N esti ĉe Lo",
+         "ecoj": 9,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N porti A per I ĉe Lo",
+         "ecoj": 43,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "bordo",
+         "ecoj": 107,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N forlasi A (loko)",
+         "ecoj": 3,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "mallumo",
+         "ecoj": 48,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "okulo",
+         "ecoj": 48,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N pensi de A ĉe Lo",
+         "ecoj": 11,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "tria okulo",
+         "ecoj": 0,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "tiu arbo",
+         "ecoj": 111,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "aero",
+         "ecoj": 16,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "eterneco",
+         "ecoj": 0,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "voĉo",
+         "ecoj": 16,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "herbejo",
+         "ecoj": 63,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N rigardi A per I ĉe Lo",
+         "ecoj": 107,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N alveni al A",
+         "ecoj": 3,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N esti naskiĝita ĉe Lo",
+         "ecoj": 9,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "nokto",
+         "ecoj": 48,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "vizaĝo",
+         "ecoj": 113,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "estinteco",
+         "ecoj": 0,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "tiu mondo",
+         "ecoj": 48,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N rigardegi A per I kaj pensi de D ĉe Lo",
+         "ecoj": 111,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "maro",
+         "ecoj": 127,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "ondo",
+         "ecoj": 119,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N esti daŭra",
+         "ecoj": 1,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N esti blua",
+         "ecoj": 1,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "memoro",
+         "ecoj": 16,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "flamo",
+         "ecoj": 126,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "tero",
+         "ecoj": 71,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "lumo",
+         "ecoj": 116,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "revo",
+         "ecoj": 16,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "mondo",
+         "ecoj": 48,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "sprito",
+         "ecoj": 0,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N esti trankvila",
+         "ecoj": 1,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "neĝo",
+         "ecoj": 84,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "nubo",
+         "ecoj": 55,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "ŝtelo",
+         "ecoj": 46,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "Signalo de espero por la estonteco",
+         "ecoj": 0,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N lumigi A",
+         "ecoj": 3,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "heredaĵo",
+         "ecoj": 48,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N venti ĉe Lo",
+         "ecoj": 9,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "Signalo de kuraĝo por la estonteco",
+         "ecoj": 0,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N aŭdas A per I",
+         "ecoj": 35,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "espero",
+         "ecoj": 0,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "mi",
+         "ecoj": 127,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "libereco",
+         "ecoj": 0,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N enfosi A per I ĉe La",
+         "ecoj": 51,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N ŝanĝiĝi en E",
+         "ecoj": 65,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N brosi A per I",
+         "ecoj": 35,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N senti A per I ĉe Lo",
+         "ecoj": 43,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "N aŭdi, vidi, kaj senti A",
+         "ecoj": 3,
+         "tipo": "verbo",
+         "extera": false
+      },
+      {
+         "signifo": "estonteco",
+         "ecoj": 48,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "vento",
+         "ecoj": 80,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "ardo",
+         "ecoj": 0,
+         "tipo": "substantivo",
+         "extera": false
+      },
+      {
+         "signifo": "N pasi tra Lo al La",
+         "ecoj": 25,
+         "tipo": "verbo",
+         "extera": false
+      }
+   ],
+   "vortoj": [
+      {
+         "vorto": "lumaneto",
+         "signifo": 0,
+         "radikoj": [
+            76
+         ]
+      },
+      {
+         "vorto": "borisa",
+         "signifo": 66,
+         "radikoj": []
+      },
+      {
+         "vorto": "medinaka",
+         "signifo": 48,
+         "radikoj": []
+      },
+      {
+         "vorto": "nevi",
+         "signifo": 29,
+         "radikoj": []
+      },
+      {
+         "vorto": "kadubori",
+         "signifo": 8,
+         "radikoj": [
+            77
+         ]
+      },
+      {
+         "vorto": "kurima",
+         "signifo": 75,
+         "radikoj": []
+      },
+      {
+         "vorto": "timito",
+         "signifo": 57,
+         "radikoj": []
+      },
+      {
+         "vorto": "rimeri",
+         "signifo": 38,
+         "radikoj": []
+      },
+      {
+         "vorto": "_aniliwana",
+         "signifo": 19,
+         "radikoj": [
+            37
+         ]
+      },
+      {
+         "vorto": "rimerimana",
+         "signifo": 0,
+         "radikoj": [
+            43
+         ]
+      },
+      {
+         "vorto": "sena",
+         "signifo": 67,
+         "radikoj": []
+      },
+      {
+         "vorto": "nedavi",
+         "signifo": 49,
+         "radikoj": []
+      },
+      {
+         "vorto": "libe",
+         "signifo": 30,
+         "radikoj": []
+      },
+      {
+         "vorto": "gemuju",
+         "signifo": 9,
+         "radikoj": [
+            82
+         ]
+      },
+      {
+         "vorto": "satilu",
+         "signifo": 76,
+         "radikoj": []
+      },
+      {
+         "vorto": "tokisa",
+         "signifo": 58,
+         "radikoj": []
+      },
+      {
+         "vorto": "rilima",
+         "signifo": 39,
+         "radikoj": []
+      },
+      {
+         "vorto": "kunateri",
+         "signifo": 20,
+         "radikoj": [
+            29
+         ]
+      },
+      {
+         "vorto": "silimanarAka",
+         "signifo": 0,
+         "radikoj": [
+            72
+         ]
+      },
+      {
+         "vorto": "luma",
+         "signifo": 38,
+         "radikoj": []
+      },
+      {
+         "vorto": "somiri",
+         "signifo": 50,
+         "radikoj": []
+      },
+      {
+         "vorto": "remona",
+         "signifo": 31,
+         "radikoj": []
+      },
+      {
+         "vorto": "kadinaviri",
+         "signifo": 10,
+         "radikoj": [
+            77
+         ]
+      },
+      {
+         "vorto": "muna",
+         "signifo": 36,
+         "radikoj": []
+      },
+      {
+         "vorto": "kudibe",
+         "signifo": 59,
+         "radikoj": []
+      },
+      {
+         "vorto": "naridavilosa",
+         "signifo": 40,
+         "radikoj": []
+      },
+      {
+         "vorto": "lumeko",
+         "signifo": 21,
+         "radikoj": [
+            76
+         ]
+      },
+      {
+         "vorto": "munaleto",
+         "signifo": 1,
+         "radikoj": [
+            87
+         ]
+      },
+      {
+         "vorto": "kaduri",
+         "signifo": 68,
+         "radikoj": []
+      },
+      {
+         "vorto": "sumE",
+         "signifo": 51,
+         "radikoj": []
+      },
+      {
+         "vorto": "peju",
+         "signifo": 32,
+         "radikoj": []
+      },
+      {
+         "vorto": "lumineri",
+         "signifo": 11,
+         "radikoj": [
+            76
+         ]
+      },
+      {
+         "vorto": "",
+         "signifo": null,
+         "radikoj": []
+      },
+      {
+         "vorto": "tena",
+         "signifo": 60,
+         "radikoj": []
+      },
+      {
+         "vorto": "makulu",
+         "signifo": 41,
+         "radikoj": []
+      },
+      {
+         "vorto": "sireko",
+         "signifo": 22,
+         "radikoj": [
+            18
+         ]
+      },
+      {
+         "vorto": "munajuka",
+         "signifo": 2,
+         "radikoj": [
+            87
+         ]
+      },
+      {
+         "vorto": "novi",
+         "signifo": 69,
+         "radikoj": []
+      },
+      {
+         "vorto": "kesikina",
+         "signifo": 52,
+         "radikoj": []
+      },
+      {
+         "vorto": "ledika",
+         "signifo": 33,
+         "radikoj": []
+      },
+      {
+         "vorto": "gemineto",
+         "signifo": 12,
+         "radikoj": [
+            82
+         ]
+      },
+      {
+         "vorto": "somigibe",
+         "signifo": 23,
+         "radikoj": [
+            55
+         ]
+      },
+      {
+         "vorto": "sariko",
+         "signifo": 61,
+         "radikoj": []
+      },
+      {
+         "vorto": "tabika",
+         "signifo": 42,
+         "radikoj": []
+      },
+      {
+         "vorto": "penusa",
+         "signifo": 53,
+         "radikoj": []
+      },
+      {
+         "vorto": "lutoto",
+         "signifo": 3,
+         "radikoj": [
+            39
+         ]
+      },
+      {
+         "vorto": "kuwana",
+         "signifo": 70,
+         "radikoj": []
+      },
+      {
+         "vorto": "simekurisa",
+         "signifo": 24,
+         "radikoj": [
+            25
+         ]
+      },
+      {
+         "vorto": "_anima",
+         "signifo": 34,
+         "radikoj": []
+      },
+      {
+         "vorto": "lumito",
+         "signifo": 13,
+         "radikoj": [
+            39
+         ]
+      },
+      {
+         "vorto": "sito",
+         "signifo": 54,
+         "radikoj": []
+      },
+      {
+         "vorto": "deluna",
+         "signifo": 62,
+         "radikoj": []
+      },
+      {
+         "vorto": "savenadisa",
+         "signifo": 43,
+         "radikoj": []
+      },
+      {
+         "vorto": "sumEnabe",
+         "signifo": 25,
+         "radikoj": []
+      },
+      {
+         "vorto": "kurimana",
+         "signifo": 3,
+         "radikoj": [
+            85
+         ]
+      },
+      {
+         "vorto": "kulonajaginesa",
+         "signifo": 71,
+         "radikoj": []
+      },
+      {
+         "vorto": "ferisa",
+         "signifo": 55,
+         "radikoj": []
+      },
+      {
+         "vorto": "molika",
+         "signifo": 35,
+         "radikoj": []
+      },
+      {
+         "vorto": "moluma",
+         "signifo": 14,
+         "radikoj": [
+            38
+         ]
+      },
+      {
+         "vorto": "kuna",
+         "signifo": 26,
+         "radikoj": []
+      },
+      {
+         "vorto": "tabelinA",
+         "signifo": 63,
+         "radikoj": []
+      },
+      {
+         "vorto": "rumesa",
+         "signifo": 44,
+         "radikoj": []
+      },
+      {
+         "vorto": "sufuri",
+         "signifo": 56,
+         "radikoj": []
+      },
+      {
+         "vorto": "lumasa",
+         "signifo": 4,
+         "radikoj": [
+            76
+         ]
+      },
+      {
+         "vorto": "viri",
+         "signifo": 72,
+         "radikoj": []
+      },
+      {
+         "vorto": "terika",
+         "signifo": 27,
+         "radikoj": []
+      },
+      {
+         "vorto": "luto",
+         "signifo": 2,
+         "radikoj": []
+      },
+      {
+         "vorto": "simireto",
+         "signifo": 15,
+         "radikoj": [
+            42
+         ]
+      },
+      {
+         "vorto": "tiri",
+         "signifo": 28,
+         "radikoj": []
+      },
+      {
+         "vorto": "dimuna",
+         "signifo": 64,
+         "radikoj": []
+      },
+      {
+         "vorto": "tedika",
+         "signifo": 45,
+         "radikoj": []
+      },
+      {
+         "vorto": "sitaka",
+         "signifo": 28,
+         "radikoj": []
+      },
+      {
+         "vorto": "mekurisa",
+         "signifo": 5,
+         "radikoj": [
+            41
+         ]
+      },
+      {
+         "vorto": "gemurisa",
+         "signifo": 73,
+         "radikoj": []
+      },
+      {
+         "vorto": "_amirana",
+         "signifo": 20,
+         "radikoj": []
+      },
+      {
+         "vorto": "jumEri",
+         "signifo": 36,
+         "radikoj": []
+      },
+      {
+         "vorto": "sigineto",
+         "signifo": 16,
+         "radikoj": [
+            18
+         ]
+      },
+      {
+         "vorto": "silimana",
+         "signifo": 38,
+         "radikoj": []
+      },
+      {
+         "vorto": "kumE",
+         "signifo": 46,
+         "radikoj": []
+      },
+      {
+         "vorto": "sitaluna",
+         "signifo": 6,
+         "radikoj": [
+            31
+         ]
+      },
+      {
+         "vorto": "lirana",
+         "signifo": 38,
+         "radikoj": []
+      },
+      {
+         "vorto": "mevi",
+         "signifo": 4,
+         "radikoj": []
+      },
+      {
+         "vorto": "kuremina",
+         "signifo": 17,
+         "radikoj": [
+            29
+         ]
+      },
+      {
+         "vorto": "midenA",
+         "signifo": 65,
+         "radikoj": []
+      },
+      {
+         "vorto": "negibe",
+         "signifo": 47,
+         "radikoj": []
+      },
+      {
+         "vorto": "dimube",
+         "signifo": 7,
+         "radikoj": [
+            71
+         ]
+      },
+      {
+         "vorto": "_ineri",
+         "signifo": 74,
+         "radikoj": []
+      },
+      {
+         "vorto": "simina",
+         "signifo": 37,
+         "radikoj": []
+      },
+      {
+         "vorto": "lumolima",
+         "signifo": 18,
+         "radikoj": [
+            76
+         ]
+      }
+   ]
+}
