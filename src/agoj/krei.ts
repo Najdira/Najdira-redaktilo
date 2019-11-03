@@ -2,6 +2,7 @@ import { RecordOf, List } from 'immutable';
 
 import { Vortaro, Signifo, Vorto } from '../vortaro';
 import { Petilo } from '.';
+import { tipo as vorttipo } from '../gramatiko';
 
 export function aldoniVorton(
 	vortaro: RecordOf<Vortaro>,
@@ -39,10 +40,26 @@ export async function kreiVorton(vortaro: RecordOf<Vortaro>, petilo: Petilo, eli
 				signifo: signifoIndekso,
 				radikoj: List(radikoj.map(r => vortaro.vortoIndekso.get(r) as number))
 			})
-		}
+		};
 	} else {
-		elirilo("Vi kreos novan signifon.");
 		const vorto = await petilo.petiVorton();
+		const tipo = vorttipo(vorto);
+		const ecoj = await petilo.petiEcojn(tipo);
+		const radikoj = await petilo.petiRadikojn(vortaro);
+		const ekstera = await petilo.petiĈuEkstera();
+		return {
+			signifo: Signifo({
+				signifo,
+				ecoj,
+				tipo,
+				ekstera,
+			}),
+			vorto: Vorto({
+				vorto,
+				signifo: vortaro.signifoj.size + 1,
+				radikoj: List(radikoj.map(r => vortaro.vortoIndekso.get(r) as number))
+			})
+		};
 	}
 	throw "123";
 }

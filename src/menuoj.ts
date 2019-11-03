@@ -5,7 +5,7 @@ import { konservi } from "./legilo";
 import { Vortaro, Signifo, Vorto } from "./vortaro";
 import { Petilo } from "./agoj";
 import { aldoniVorton, kreiVorton } from "./agoj/krei";
-import { troviVortojn } from "./agoj/trovi";
+import { troviVortojn, troviVorton } from "./agoj/trovi";
 
 export async function ĉefaMenuo(vortaro: RecordOf<Vortaro>, petilo: Petilo, elirejo: string): Promise<void> {
 	const {elekto} = await prompt<{elekto: string}>({
@@ -15,6 +15,7 @@ export async function ĉefaMenuo(vortaro: RecordOf<Vortaro>, petilo: Petilo, eli
 		choices: [
 			"Krei vorton",
 			"Trovi vortojn per signifo",
+			"Trovi vorton",
 			"Redakti vorton",
 			"Redakti signifon",
 			"Konservi kaj eliri",
@@ -37,6 +38,15 @@ export async function ĉefaMenuo(vortaro: RecordOf<Vortaro>, petilo: Petilo, eli
 					for (const {vorto} of rezultoj) {
 						console.log(vorto);
 					}
+				}
+				break;
+			case "Trovi vorton":
+				const rezultoj2 = await troviVorton(vortaro, petilo);
+				if (rezultoj2 == null) {
+					console.log("Neniun vorton trovitan.");
+				} else {
+					console.log("Jen la rezulto:");
+					console.log(`${rezultoj2.vorto}: ${vortaro.signifoj.get(rezultoj2.signifo)}`);
 				}
 				break;
 			case "Konservi kaj eliri":

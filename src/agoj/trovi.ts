@@ -12,3 +12,8 @@ export async function troviVortojn(vortaro: RecordOf<Vortaro>, petilo: Petilo): 
 		}).values()
 	);
 }
+
+export async function troviVorton(vortaro: RecordOf<Vortaro>, petilo: Petilo): Promise<RecordOf<Vorto> | undefined> {
+	const eniro = await petilo.petiVorton();
+	return vortaro.vortoj.find(v => v.vorto === eniro);
+}

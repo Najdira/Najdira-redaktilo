@@ -107,8 +107,10 @@ export function legiJSON(dosiero: string): Promise<RecordOf<Vortaro>> {
 export function konservi(vortaro: RecordOf<Vortaro>, dosiero: string): Promise<void> {
 	return new Promise((sukcesi, malsukcesi) => {
 		writeFile(dosiero, JSON.stringify({
-			signifoj: Array.from(vortaro.signifoj.values()).map(s => s.toJSON()),
-			vortoj: Array.from(vortaro.vortoj.values()).map(v => v.toJSON()),
+			signifoj: Array.from(vortaro.signifoj.entries())
+				.sort((a, b) => a[0] < b[0] ? -1 : a[0] === b[0] ? 0 : 1).map(e => e[1]),
+			vortoj: Array.from(vortaro.vortoj.entries())
+				.sort((a, b) => a[0] < b[0] ? -1 : a[0] === b[0] ? 0 : 1).map(e => e[1]),
 		}, null, 3), eraro => {
 			if (eraro != null) {
 				malsukcesi(eraro);

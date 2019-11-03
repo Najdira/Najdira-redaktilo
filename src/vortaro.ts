@@ -20,14 +20,14 @@ export interface Signifo {
 	signifo: string,
 	ecoj: number,
 	tipo: Vorttipo,
-	extera: boolean,
+	ekstera: boolean,
 }
 
 export const Signifo = Record<Signifo>({
 	signifo: "",
 	ecoj: 0,
 	tipo: "nekonita",
-	extera: false,
+	ekstera: false,
 });
 
 export interface Vorto {
