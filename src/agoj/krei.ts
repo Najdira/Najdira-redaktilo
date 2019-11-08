@@ -1,7 +1,7 @@
 import { RecordOf, List } from 'immutable';
 
 import { Vortaro, Signifo, Vorto } from '../vortaro';
-import { Petilo } from '.';
+import { Petilo, ecojDeVerbo } from '.';
 import { tipo as vorttipo } from '../gramatiko';
 
 export function aldoniSignifon(vortaro: RecordOf<Vortaro>, signifo: RecordOf<Signifo>): RecordOf<Vortaro> {
@@ -50,7 +50,7 @@ export async function kreiVorton(vortaro: RecordOf<Vortaro>, petilo: Petilo, eli
 			throw `La vorto ${vorto} jam ekzistas`;
 		}
 		const tipo = vorttipo(vorto);
-		const ecoj = await petilo.petiEcojn(tipo);
+		const ecoj = tipo === "verbo" ? ecojDeVerbo(signifo) : await petilo.petiEcojn(tipo);
 		const radikoj = await petilo.petiRadikojn(vortaro);
 		const ekstera = await petilo.petiĈuEkstera();
 		return {

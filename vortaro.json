@@ -467,6 +467,24 @@
          "ecoj": 4,
          "tipo": "substantivo",
          "ekstera": false
+      },
+      {
+         "signifo": "valo",
+         "ecoj": 58,
+         "tipo": "substantivo",
+         "ekstera": false
+      },
+      {
+         "signifo": "blua ĉielo",
+         "ecoj": 52,
+         "tipo": "substantivo",
+         "ekstera": false
+      },
+      {
+         "signifo": "N esti fantastika",
+         "ecoj": 1,
+         "tipo": "verbo",
+         "ekstera": false
       }
    ],
    "vortoj": [
@@ -972,6 +990,28 @@
          "radikoj": [
             76,
             1
+         ]
+      },
+      {
+         "vorto": "sominevari",
+         "signifo": 78,
+         "radikoj": [
+            55
+         ]
+      },
+      {
+         "vorto": "delunari",
+         "signifo": 79,
+         "radikoj": [
+            69
+         ]
+      },
+      {
+         "vorto": "ledilumisa",
+         "signifo": 80,
+         "radikoj": [
+            14,
+            36
          ]
       }
    ]

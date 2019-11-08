@@ -13,6 +13,18 @@ export interface Petilo {
 
 const uziNovan = "<Uzi novan>";
 const sEcoj = ["sur", "super", "sub", "apud", "en", "al", "kontraŭ"];
+const vEcoj = ["N", "A", "D", "Lo", "La", "I", "E"];
+
+export function ecojDeVerbo(signifo: string) {
+	return vEcoj.reduce((acc, sekva, i) => {
+		const re = new RegExp(`\\W*${sekva}\\W*`);
+		if (re.test(signifo)) {
+			return acc | (1 << i);
+		} else {
+			return acc;
+		}
+	}, 0);
+}
 
 export const petilo: Petilo = {
 	async petiSignifon(vortaro) {
@@ -74,8 +86,11 @@ export const petilo: Petilo = {
 			return elektoj.reduce((acc, sekva) => {
 				return acc | (1 << sEcoj.indexOf(sekva));
 			}, 0);
+		} else if (vorttipo === "helpvorto") {
+			return 0;
+		} else {
+			throw "La vorttipo estas nekonita";			
 		}
-		throw "La vorttipo estas nekonita";
 	},
 	async petiĈuEkstera() {
 		const {ekstera} = await prompt<{ekstera: boolean}>({
