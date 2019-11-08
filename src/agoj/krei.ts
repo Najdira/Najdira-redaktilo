@@ -4,10 +4,13 @@ import { Vortaro, Signifo, Vorto } from '../vortaro';
 import { Petilo } from '.';
 import { tipo as vorttipo } from '../gramatiko';
 
-export function aldoniVorton(
-	vortaro: RecordOf<Vortaro>,
-	vorto: RecordOf<Vorto>,
-): RecordOf<Vortaro> {
+export function aldoniSignifon(vortaro: RecordOf<Vortaro>, signifo: RecordOf<Signifo>): RecordOf<Vortaro> {
+	const novajSignifoj = vortaro.signifoj.set(vortaro.signifoj.size, signifo);
+	const novaIndekso = vortaro.signifoIndekso.set(signifo.signifo, vortaro.signifoj.size);
+	return vortaro.set("signifoj", novajSignifoj).set("signifoIndekso", novaIndekso);
+}
+
+export function aldoniVorton(vortaro: RecordOf<Vortaro>, vorto: RecordOf<Vorto>): RecordOf<Vortaro> {
 	const signifo = vortaro.signifoj.get(vorto.signifo);
 	if (signifo == null) {
 		throw Error(`La signifo de ${vorto.vorto} ne ekzistas`);
@@ -43,6 +46,9 @@ export async function kreiVorton(vortaro: RecordOf<Vortaro>, petilo: Petilo, eli
 		};
 	} else {
 		const vorto = await petilo.petiVorton();
+		if (vortaro.vortoIndekso.has(vorto)) {
+			throw `La vorto ${vorto} jam ekzistas`;
+		}
 		const tipo = vorttipo(vorto);
 		const ecoj = await petilo.petiEcojn(tipo);
 		const radikoj = await petilo.petiRadikojn(vortaro);
@@ -56,7 +62,7 @@ export async function kreiVorton(vortaro: RecordOf<Vortaro>, petilo: Petilo, eli
 			}),
 			vorto: Vorto({
 				vorto,
-				signifo: vortaro.signifoj.size + 1,
+				signifo: vortaro.signifoj.size,
 				radikoj: List(radikoj.map(r => vortaro.vortoIndekso.get(r) as number))
 			})
 		};

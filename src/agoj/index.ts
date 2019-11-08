@@ -69,17 +69,20 @@ export const petilo: Petilo = {
 				type: "multiselect",
 				message: "Kiujn prepoziciojn la substantivo akceptas?",
 				name: "elektoj",
-				choices: sEcoj,
+				choices: Array.from(sEcoj),
 			});
-			return elektoj.reduce((acc, sekva) => acc | 1 << sEcoj.indexOf(sekva), 0);
+			return elektoj.reduce((acc, sekva) => {
+				return acc | (1 << sEcoj.indexOf(sekva));
+			}, 0);
 		}
 		throw "La vorttipo estas nekonita";
 	},
 	async petiĈuEkstera() {
-		return await prompt<boolean>({
+		const {ekstera} = await prompt<{ekstera: boolean}>({
 			type: "confirm",
 			message: "Ĉu ĉi tiu vorto estas ekstera?",
-			name: "_"
+			name: "ekstera"
 		});
+		return ekstera;
 	}
 }

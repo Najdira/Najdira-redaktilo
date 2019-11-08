@@ -4,7 +4,7 @@ import { RecordOf, List } from "immutable";
 import { konservi } from "./legilo";
 import { Vortaro, Signifo, Vorto } from "./vortaro";
 import { Petilo } from "./agoj";
-import { aldoniVorton, kreiVorton } from "./agoj/krei";
+import { aldoniVorton, aldoniSignifon, kreiVorton } from "./agoj/krei";
 import { troviVortojn, troviVorton } from "./agoj/trovi";
 
 export async function ĉefaMenuo(vortaro: RecordOf<Vortaro>, petilo: Petilo, elirejo: string): Promise<void> {
@@ -26,7 +26,8 @@ export async function ĉefaMenuo(vortaro: RecordOf<Vortaro>, petilo: Petilo, eli
 		switch (elekto) {
 			case "Krei vorton":
 				const {signifo, vorto} = await kreiVorton(vortaro, petilo, console.log);
-				ĉefaMenuo(aldoniVorton(vortaro, vorto), petilo, elirejo);
+				const kunSignifo = signifo != null ? aldoniSignifon(vortaro, signifo) : vortaro;
+				ĉefaMenuo(aldoniVorton(kunSignifo, vorto), petilo, elirejo);
 				console.log(`Vi kreis la vorton ${vorto.vorto}`);
 				break;
 			case "Trovi vortojn per signifo":
@@ -39,6 +40,7 @@ export async function ĉefaMenuo(vortaro: RecordOf<Vortaro>, petilo: Petilo, eli
 						console.log(vorto);
 					}
 				}
+				await ĉefaMenuo(vortaro, petilo, elirejo);
 				break;
 			case "Trovi vorton":
 				const rezultoj2 = await troviVorton(vortaro, petilo);
@@ -48,15 +50,17 @@ export async function ĉefaMenuo(vortaro: RecordOf<Vortaro>, petilo: Petilo, eli
 					console.log("Jen la rezulto:");
 					console.log(`${rezultoj2.vorto}: ${vortaro.signifoj.get(rezultoj2.signifo)}`);
 				}
+				await ĉefaMenuo(vortaro, petilo, elirejo);
 				break;
 			case "Konservi kaj eliri":
 				await konservi(vortaro, elirejo);
-				return;
+				break;
 			default:
+				await ĉefaMenuo(vortaro, petilo, elirejo);
 				break;
 		}
 	} catch (e) {
 		console.error(e);
+		await ĉefaMenuo(vortaro, petilo, elirejo);
 	}
-	await ĉefaMenuo(vortaro, petilo, elirejo);
 }

@@ -461,6 +461,12 @@
          "ecoj": 5,
          "tipo": "verbo",
          "ekstera": false
+      },
+      {
+         "signifo": "suno",
+         "ecoj": 4,
+         "tipo": "substantivo",
+         "ekstera": false
       }
    ],
    "vortoj": [
@@ -959,6 +965,14 @@
          "vorto": "muna",
          "signifo": 36,
          "radikoj": []
+      },
+      {
+         "vorto": "luna",
+         "signifo": 77,
+         "radikoj": [
+            76,
+            1
+         ]
       }
    ]
 }
