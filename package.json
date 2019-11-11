@@ -4,7 +4,8 @@
   "description": "Najdira redaktilo",
   "main": "index.ts",
   "scripts": {
-    "test": "mocha -r ts-node/register src/**/*.testo.ts"
+    "test": "mocha -r ts-node/register src/**/*.testo.ts",
+    "start":  "ts-node .\\src\\enirejo.ts .\\vortaro.json vortaro2.json"
   },
   "author": "Sam Wang",
   "license": "MIT",

@@ -1,4 +1,4 @@
-import { Vorttipo } from "./vortaro";
+import {Vorttipo} from "./vortaro";
 
 const substantivoFinaĵoj = new Set(["ma", "mE", "na", "to", "ri", "ju", "ka"]);
 const verboFinaĵoj = new Set(["be", "vi", "sa", "nA", "zɔ", "lu", "ko"]);
@@ -16,3 +16,6 @@ export function tipo(vorto: string): Vorttipo {
 		return "nekonita";
 	}
 }
+
+export const substantivoEcoj = ["sur", "super", "sub", "apud", "en", "al", "kontraŭ"];
+export const verboEcoj = ["N", "A", "D", "Lo", "La", "I", "E"];

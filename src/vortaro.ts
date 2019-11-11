@@ -21,6 +21,7 @@ export interface Signifo {
 	ecoj: number,
 	tipo: Vorttipo,
 	ekstera: boolean,
+	svligoj: Map<number, number>,
 }
 
 export const Signifo = Record<Signifo>({
@@ -28,6 +29,17 @@ export const Signifo = Record<Signifo>({
 	ecoj: 0,
 	tipo: "nekonita",
 	ekstera: false,
+	svligoj: Map(),
+});
+
+export interface SVLigo {
+	verbo: number,
+	kazoj: number,
+}
+
+export const SVLigo = Record<SVLigo>({
+	verbo: -1,
+	kazoj: -1,
 });
 
 export interface Vorto {

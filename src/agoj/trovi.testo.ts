@@ -1,8 +1,8 @@
-import { assert } from 'chai';
-import { Map, List, RecordOf } from 'immutable';
-import 'mocha';
+import { assert } from "chai";
+import { Map, List, RecordOf } from "immutable";
+import "mocha";
 
-import { Vortaro, Signifo, Vorto } from '../vortaro';
+import { Vortaro, Signifo, Vorto } from "../vortaro";
 import { kreiTestanPetilon } from "./testiloj";
 import { troviVortojn } from "./trovi";
 
@@ -16,7 +16,7 @@ const testVortaro = Vortaro({
 	]).toOrderedMap(),
 	vortoj: List<RecordOf<Vorto>>([
 		Vorto({
-			vorto: 'luma',
+			vorto: "luma",
 			signifo: 0,
 		})
 	]).toOrderedMap(),
@@ -28,9 +28,13 @@ const testVortaro = Vortaro({
 	}),
 });
 
-describe('La funkcio "troviVortojn"', function() {
-	it('trovas unu vorto per signifo', async function() {
-		const testPetilo = kreiTestanPetilon("lumo", "luma", []);
+describe("La funkcio \"troviVortojn\"", function() {
+	it("trovas unu vorto per signifo", async function() {
+		const testPetilo = kreiTestanPetilon({
+			signifo: "lumo",
+			vorto: "luma",
+			radikoj: [],
+		});
 		const rezulto = await troviVortojn(testVortaro, testPetilo);
 		assert.equal(1, rezulto.length);
 		assert.equal("luma", rezulto[0].vorto);

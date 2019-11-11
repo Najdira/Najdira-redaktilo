@@ -1,10 +1,9 @@
-import { assert } from 'chai';
-import { Map, List, RecordOf } from 'immutable';
-import 'mocha';
+import { assert } from "chai";
+import { Map, List, RecordOf } from "immutable";
+import "mocha";
 
-import { Vortaro, Signifo, Vorto } from '../vortaro';
-import { aldoniVorton, kreiVorton } from './krei';
-import { Petilo } from '.';
+import { Vortaro, Signifo, Vorto } from "../vortaro";
+import { aldoniVorton, kreiVorton } from "./krei";
 import { kreiTestanPetilon } from "./testiloj";
 
 const testVortaro = Vortaro({
@@ -17,7 +16,7 @@ const testVortaro = Vortaro({
 	]).toOrderedMap(),
 	vortoj: List<RecordOf<Vorto>>([
 		Vorto({
-			vorto: 'luma',
+			vorto: "luma",
 			signifo: 0,
 		})
 	]).toOrderedMap(),
@@ -29,8 +28,8 @@ const testVortaro = Vortaro({
 	}),
 });
 
-describe('La funkcio "aldoniVorton"', function() {
-	it('aldonas vorton kun ekzistanta signifo en vortaron', function() {
+describe("La funkcio \"aldoniVorton\"", function() {
+	it("aldonas vorton kun ekzistanta signifo en vortaron", function() {
 		let novaVorto = Vorto({
 			vorto: "silimana",
 			signifo: 0,
@@ -42,11 +41,15 @@ describe('La funkcio "aldoniVorton"', function() {
 	});
 });
 
-describe('La funkcio "kreiVorton"', function() {
-	it('kreas novan vorton kun ekzistanta signifon', async function() {
-		const testaPetilo = kreiTestanPetilon("lumo", "silimana", []);
+describe("La funkcio \"kreiVorton\"", function() {
+	it("kreas novan vorton kun ekzistanta signifon", async function() {
+		const testaPetilo = kreiTestanPetilon({
+			signifo: "lumo",
+			vorto: "silimana",
+			radikoj: [],
+		});
 		const {signifo, vorto} = await kreiVorton(testVortaro, testaPetilo, () => {});
 		assert.notExists(signifo);
 		assert.equal(vorto.vorto, "silimana");
-	})
+	});
 });

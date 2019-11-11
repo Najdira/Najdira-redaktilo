@@ -1,8 +1,8 @@
-import { RecordOf, List } from 'immutable';
+import { RecordOf, List } from "immutable";
 
-import { Vortaro, Signifo, Vorto } from '../vortaro';
-import { Petilo, ecojDeVerbo } from '.';
-import { tipo as vorttipo } from '../gramatiko';
+import { Vortaro, Signifo, Vorto } from "../vortaro";
+import { Petilo, ecojDeVerbo } from ".";
+import { tipo as vorttipo } from "../gramatiko";
 
 export function aldoniSignifon(vortaro: RecordOf<Vortaro>, signifo: RecordOf<Signifo>): RecordOf<Vortaro> {
 	const novajSignifoj = vortaro.signifoj.set(vortaro.signifoj.size, signifo);
